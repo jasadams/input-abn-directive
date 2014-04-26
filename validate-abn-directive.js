@@ -7,8 +7,6 @@ angular.module('validate-abn-directive',[])
 
         var weights = [10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
 
-        // watch the scope array that contains the list of invalid values for changes
-
         // Call the "checkValue" called whenever the value in the element changes
         ctrl.$parsers.unshift(checkValue);
 
