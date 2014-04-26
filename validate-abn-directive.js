@@ -14,6 +14,13 @@ angular.module('validate-abn-directive',[])
 
         // This is the function that does the validation
         function checkValue(viewValue) {
+
+          // If the input is not required, and the user hasn't entered a value, then don't mark as invalid
+          if (viewValue.length === 0 && typeof attrs.required === 'undefined') {
+            ctrl.$setValidity('validAbn', true);
+            return viewValue;
+          }
+
           // strip anything other than digits
           var abn = viewValue.replace(/[^0-9]+/g, '');
 
