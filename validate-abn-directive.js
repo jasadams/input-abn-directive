@@ -48,7 +48,7 @@ angular.module('validate-abn-directive',[])
               }
             }
             ctrl.$setValidity('validAbn', false);
-            return viewValue;
+            return abn;
           }
         }
       }
